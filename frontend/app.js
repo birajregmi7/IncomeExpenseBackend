@@ -118,7 +118,7 @@ function funTable() {
 //Backend by ad007
 async function displayTransactions() {
   try {
-    const response = await fetch("http://localhost:3000/api/transactions");
+    const response = await fetch("https://backend-income.onrender.com/api/transactions");
 
     if (response.ok) {
       const transactions = await response.json();
@@ -154,7 +154,7 @@ async function displayTransactions() {
 async function addTransaction(type, name, amount) {
   try {
     const date = new Date().toDateString();
-    const response = await fetch("http://localhost:3000/api/transactions", {
+    const response = await fetch("https://backend-income.onrender.com/api/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

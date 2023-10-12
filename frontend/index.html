@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income Expense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Expense Tracker</h1>
+    </div>
+    <div class="container">
+      <div class="form-container">
+        <h2>Income</h2>
+        <form id="income-form">
+          <label for="incomeName">Income Name:</label>
+          <input type="text" id="incomeName" name="incomeName" />
+          <label for="incomeAmount">Income Amount:</label>
+          <input type="number" id="incomeAmount" name="incomeAmount" />
+          <button
+            type="submit"
+            style="background-color: green; color: white; font-weight: 700"
+          >
+            Add Income
+          </button>
+        </form>
+      </div>
+      <div class="form-container">
+        <h2>Expense</h2>
+        <form id="expense-form">
+          <label for="expenseName">Expense Name:</label>
+          <input type="text" id="expenseName" name="expenseName" />
+          <label for="expenseAmount">Expense Amount:</label>
+          <input type="number" id="expenseAmount" name="expenseAmount" />
+          <button
+            type="submit"
+            style="background-color: #fb3d39; color: white; font-weight: 700"
+          >
+            Add Expense
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="total-amount" id="total-amount">Total Amount: $0</div>
+    <table class="transaction-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody id="transaction-list"></tbody>
+    </table>
+    <script src="app.js"></script>
+  </body>
+</html>
